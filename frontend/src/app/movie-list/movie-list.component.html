@@ -1,0 +1,28 @@
+<div class="container">
+    <h3 class="h3">Movie List </h3>
+    <div class="row panel-body" style="position:relative">
+      <div class="col-md-3 col-sm-6" *ngFor="let row of rows" style="margin-bottom: 25px">
+        <div class="product-grid">
+            <div class="product-image">
+                <a (click)="show(row['id'])" style="cursor: pointer;">
+                    <img class="pic-1" src="{{row.medium_url}}">
+                </a>
+            </div>
+            <ul class="rating">
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star"></li>
+                <li class="fa fa-star disable"></li>
+            </ul>
+            <div class="product-content">
+                <h2 class="title"><a (click)="show(row['id'])" style="cursor: pointer;">{{row.name}}</a></h2>
+                <div class="price">
+                    Year: {{row.year}} - Director: {{row.director}}
+                </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
